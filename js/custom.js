@@ -474,8 +474,20 @@ $(function(){
 
         	mapTypeControlOptions: {
         		mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
-        		'styled_map']
-        	}
+        		'styled_map'],
+        		style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+        		position: google.maps.ControlPosition.TOP_LEFT
+        	},
+        	zoomControl: true,
+        	zoomControlOptions: {
+        		position: google.maps.ControlPosition.RIGHT_TOP
+        	},
+        	scaleControl: true,
+        	streetViewControl: true,
+        	streetViewControlOptions: {
+        		position: google.maps.ControlPosition.RIGHT_TOP
+        	},
+        	fullscreenControl: true
         });
 
         var marker = new google.maps.Marker({
@@ -488,7 +500,7 @@ $(function(){
         var marker = new google.maps.Marker({
         	position: uluru,
         	map: map,
-        	title: 'Ваша тераса'
+        	title: 'Ваша тераса',
         });
     }
 
